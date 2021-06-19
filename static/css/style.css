@@ -1,0 +1,170 @@
+
+/*body {*/
+/*padding-top: 1rem;*/
+/*font-family: Hack, monospace;*/
+/*background-color : #483E5B;*/
+/*}*/
+
+body {
+	background: linear-gradient(-45deg, #002855, #33415c, #001233, #001845);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	font-family: 'Source Code Pro', monospace;
+	font-size: 18px;
+
+
+}
+
+* {
+	margin-top: 15px;
+	margin-left: 2px;
+
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+p {
+	font-weight: lighter;
+	font-size: .97em;
+}
+#display{
+	margin-bottom: 1px;
+}
+#display:hover {
+	cursor: pointer;
+	color: #d9d9d9;
+}
+
+th{
+	border: 30px solid rgba(255, 0, 0, 0);
+	border-bottom: 23px solid rgba(255, 0, 0, 0);
+}
+td{
+	border-left: 30px solid rgba(255, 0, 0, 0);
+	border-right: 30px solid rgba(255, 0, 0, 0);
+	border-bottom: 20px solid rgba(255, 0, 0, 0);
+
+}
+.icon {
+	font-size: 2.5em;
+}
+
+#prechange {
+	color: white;
+}
+
+table {
+	font-size: 1.3em;
+}
+#changelog {
+	font-size: 1.3em;
+}
+
+.username {
+    color : #00FF00
+}
+
+.directory {
+    color: #43939F;
+}
+
+#text {
+    color: white;
+		font-size: 17px;
+		margin-bottom: 50px;
+		margin-top: 30px;
+
+}
+.typed-text{
+	color: #e4e2e3;
+
+
+}
+
+#links{
+	font-size: 1.1em;
+
+}
+
+.links {
+    color: #FFFFFF;
+}
+.cursor {
+
+display : inline-block;
+width : 3px;
+background-color : #FFFFFF;
+margin-left : .1rem;
+animation : blink 1s infinite;
+}
+
+.cursor.typing{
+animation:none;
+
+}
+@keyframes blink {
+0% {background-color: #FFFFFF;}
+50% {background-color: transparent;}
+100% {background-color: #FFFFFF;}
+}
+
+
+
+.academic {
+	color: #ff006e;
+	font-weight: bold;
+}
+.projects {
+	color: #8338ec;
+	font-weight: bold;
+
+
+}
+.learning {
+	color: #ffd60a;
+	font-weight: bold;
+
+}
+
+
+.date {
+	font-style: italic;
+	font-weight: lighter;
+}
+
+th {
+    color: white;
+}
+td {
+    color: white;
+}
+
+@media only screen and (min-width: 768px) {
+
+	body{
+		font-size: 20px;
+	}
+
+	#links{
+		font-size: 1em;
+
+	}
+	#changelog{
+		font-size: .8em;
+	}
+	#prechange{
+		font-size: 1em;
+	}
+
+
+
+}

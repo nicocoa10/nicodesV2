@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+{% extends "projects_app/base.html" %}
+{% block body_block %}
+
+<div class="header">
+    <h3><span class="username">nicolasOjeda</span><span class="directory">$ </span><span class="typed-text">ls projects</span><span class="cursor">&nbsp;</span></h3>
+</div>
+
+<div id="links">
+    <a href="https://www.linkedin.com/in/nojeda3/">linkedin</a>
+    <a href="https://github.com/nicocoa10">github</a>
+<!--    <a href="http://goo.gl/Foy2Nc">resume</a>-->
+    <a href="mailto:nicolas.ojeda71@gmail.com">email</a>
+    <a href="https://www.dropbox.com/sh/edzcg1uxrc1tfxx/AAAM2KiYnUAmro3xI-12istja?dl=0">music</a>
+  </div>
+<div id="text">
+    <p>Hello, my name is Nicolas Ojeda,2021 Computer Science grad from CSULA. Looking for a job where i can grow as a developer and help build amazing products!</p>
+
+
+</div>
+
+<div id="prechange">
+  <h5 id="display"> <span class="plus">[+] </span>Changelog  <span class="plus1">[+] </span></h5>
+  <p>Check out what i been up to and building ! :)</p>
+</div>
+
+<div id="changelog">
+  <span class="academic">Academic </span>
+  <span class="projects">Projects </span>
+  <span class="learning">Learning </span>
+
+  <table >
+      <tr>
+          <th id="typeheader">type</th><th id="typedate">date</th><th id="typedes">description (over on for more)</th>
+      </tr>
+  {% if projects %}
+    {% for p in projects %}
+      <tr>
+          <td class="icon {{ p.type }}"> ·</td>
+          <td class="date"> {{ p.date }} </td>
+          <td class="description {{ p.type }}">{{ p.description }}
+
+            <div class="appear">
+              <br>
+              <a href="{{ p.link }}">{{ p.link }}</a>
+
+            </div>
+
+          </td>
+      </tr>
+    {% endfor %}
+  </table>
+  {% else %}
+  <p>No Data to Display</p>
+  {% endif %}
+
+</div>
+
+        <!-- {% if projects %}
+            {% for p in projects %}
+                {{ p.date }}
+            {% endfor %}
+        {% else %}
+        <p>No Data to Display</p>
+        {% endif %} -->
+<!-- <div class="changelog" >
+    <div >
+        {% if projects %}
+        <table class="table table-bordered"   >
+            <thead>
+            <tr>
+                <th>Name</th><th>Decription</th><th>link</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for p in projects %}
+            <tr>
+                <td> {{ p.name }}</td>
+                <td> {{ p.description }}</td>
+                <td> <a href="{{ p.project_url }}">{{ p.project_url }} </a></td>
+            </tr>
+            </tbody>
+            {% endfor %}
+        </table>
+        {% else %}
+        <p>No Data to Display</p>
+        {% endif %}
+
+
+    </div>
+
+
+</div> -->
+{% endblock %}
